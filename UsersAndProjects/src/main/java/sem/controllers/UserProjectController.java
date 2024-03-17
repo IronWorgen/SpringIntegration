@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sem.model.Project;
 import sem.model.User;
+import sem.service.FileGateWay;
 import sem.service.UserProjectService;
 
 import java.util.List;
@@ -26,6 +27,9 @@ import java.util.List;
 public class UserProjectController {
     private final UserProjectService userProjectService;
     private final Counter requestCounter = Metrics.counter("requestCounter");
+
+
+
 
 
     /**
@@ -69,6 +73,7 @@ public class UserProjectController {
             userProjectService.addUserToProject(userId, projectId);
             return new ResponseEntity(HttpStatus.OK);
         }
+
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
 
@@ -86,5 +91,7 @@ public class UserProjectController {
         userProjectService.removeUserFromProject(userId, projectId);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+
 
 }

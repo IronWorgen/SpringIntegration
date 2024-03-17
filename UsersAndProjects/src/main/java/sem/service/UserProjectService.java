@@ -28,6 +28,7 @@ public class UserProjectService {
     private final ProjectRepository projectRepository;
 
 
+
     /**
      * метод, возвращающий список пользователей, связанных с определенным проектом
      *
@@ -88,5 +89,7 @@ public class UserProjectService {
     public boolean isUserAndProjectExist(Long userId, Long projectId) {
         return (userRepository.findById(userId) != null) && (projectRepository.findById(projectId) != null);
     }
+
+
 
 }

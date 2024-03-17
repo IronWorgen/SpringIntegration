@@ -9,13 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>sem</groupId>
-	<artifactId>SpringData_JPA_HW</artifactId>
+	<artifactId>SpringIntegration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>SpringData_JPA_H2_ex2</name>
 	<description>Demo project for Spring Boot</description>
 	<modules>
-		<module>TaskManager</module>
         <module>UsersAndProjects</module>
     </modules>
 	<properties>
